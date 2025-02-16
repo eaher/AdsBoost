@@ -188,7 +188,7 @@ body {
     margin-bottom: 30px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
-.btn-cta {
+.btn-hero{
     background-color: #ff6b00;
     color: #fff;
     padding: 15px 30px;
@@ -250,6 +250,65 @@ body {
         text-shadow: 10px #1C0747;
     }
 }
+
+
+
+/* SECCIONES DE PROBLEMAS*/
+
+
+.problemas {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.problem-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+}
+
+.problem-icon {
+    margin-bottom: 20px;
+    color: #dc3545;
+}
+
+.problem-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.problem-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.problem-cta {
+    margin-top: 50px;
+}
+
+.btn-primary {
+    background-color: #ff6b00;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color:  #e65a00;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
 
 /* SECCIONES DE CONTENIDO */
 section {
@@ -360,3 +419,105 @@ section h2 {
     background-color: #1C0747;
     color: #fff;
 }
+/*---------------------------------------
+    BTN WSP Y MODAL
+--------------------------------------*/
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    z-index: 10000;
+  }
+  .whatsapp-float i {
+    margin-top: 16px;
+  }
+  
+  /* Ajustes para el contenido del modal */
+
+  .modal-custom {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+  }
+  
+  .modal-title {
+    color: #1C0747;
+    font-size: 1.75em;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    background-color: #fff;
+    padding: 30px 20px;
+    color: #555;
+    font-size: 1em;
+  }
+  
+  .modal-intro {
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .modal-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal-list li i {
+    color: #ff6b00;
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
+  
+  .btn-cta {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #ff6b00;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e65a00;
+  }
+  
+  .urgencia {
+    text-align: center;
+    font-weight: bold;
+    color: #ff6b00;
+    font-size: 0.95em;
+    margin: 0;
+  }
+  

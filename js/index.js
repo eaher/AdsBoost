@@ -25,3 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
     handleScrollAnimation();
   });
   
+  document.addEventListener("DOMContentLoaded", function () {
+    // Muestra el modal después de 3 segundos
+    setTimeout(() => {
+      const ctaModalEl = document.getElementById('ctaModal');
+      if (ctaModalEl) {
+        const ctaModal = new bootstrap.Modal(ctaModalEl);
+        ctaModal.show();
+      }
+    }, 3000);
+  });
+  

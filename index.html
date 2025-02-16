@@ -1,179 +1,297 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdsBoost - Agencia de Marketing Digital</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Tu CSS personalizado -->
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Font Awesome CDN para íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdsBoost - Agencia de Marketing Digital</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome CDN para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-ku/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-  <!-- Navbar -->
-  <header class="header">
-    <div class="container header-container">
-      <div class="logo">
-        <a href="#"><img src="img/logoweb.png" alt="AdsBoost Logo"></a>
-      </div>
-      <!-- Menú para pantallas grandes -->
-      <nav class="nav desktop-menu">
-        <ul>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#ayuda">¿Cómo podemos ayudarte?</a></li>
-          <li><a href="#meta-ads">Meta Ads</a></li>
-          <li><a href="#por-que-elegirnos">¿Por qué elegirnos?</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- Botón off-canvas para pantallas pequeñas (visible solo en móviles) -->
-      <button class="btn btn-outline-light d-md-none" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
 
-  <!-- Offcanvas de Bootstrap -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#"><img src="img/logoweb.png" alt="AdsBoost Logo"></a>
+            </div>
+            <!-- Menú para pantallas grandes -->
+            <nav class="nav desktop-menu">
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#ayuda">¿Cómo podemos ayudarte?</a></li>
+                    <li><a href="#meta-ads">Meta Ads</a></li>
+                    <li><a href="#por-que-elegirnos">¿Por qué elegirnos?</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Botón off-canvas para pantallas pequeñas (visible solo en móviles) -->
+            <button class="btn btn-outline-light d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Offcanvas de Bootstrap -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled offcanvas-menu-list">
+                <li><a href="#servicios" class="offcanvas-link">Servicios</a></li>
+                <li><a href="#ayuda" class="offcanvas-link">¿Cómo podemos ayudarte?</a></li>
+                <li><a href="#meta-ads" class="offcanvas-link">Meta Ads</a></li>
+                <li><a href="#por-que-elegirnos" class="offcanvas-link">¿Por qué elegirnos?</a></li>
+                <li><a href="#contacto" class="offcanvas-link">Contacto</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="list-unstyled offcanvas-menu-list">
-        <li><a href="#servicios" class="offcanvas-link">Servicios</a></li>
-        <li><a href="#ayuda" class="offcanvas-link">¿Cómo podemos ayudarte?</a></li>
-        <li><a href="#meta-ads" class="offcanvas-link">Meta Ads</a></li>
-        <li><a href="#por-que-elegirnos" class="offcanvas-link">¿Por qué elegirnos?</a></li>
-        <li><a href="#contacto" class="offcanvas-link">Contacto</a></li>
-      </ul>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="hero animate-on-scroll">
+        <img src="img/img_ini.png" alt="Imagen de fondo de Hero" class="hero-img">
+        <div class="contenido-hero">
+            <h1>Multiplica tus Ventas con Meta Ads</h1>
+            <p>Especialistas en generar leads calificados y ventas reales a través de Facebook e Instagram Ads</p>
+            <a href="#contacto" class="btn-hero">¡Hablemos!</a>
+        </div>
+    </section>
+
+    <!-- Sección de Problemas/Pain Points -->
+    <section id="problemas" class="problemas animate-on-scroll">
+        <div class="container">
+            <div class="problem-header text-center mb-5">
+                <h2>¿Te identificas con alguno de estos desafíos?</h2>
+                <p class="lead">La mayoría de los negocios enfrentan estos obstáculos al gestionar sus campañas de Meta
+                    Ads</p>
+            </div>
+
+            <div class="row problems-grid">
+                <!-- Problema 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-chart-line fa-2x text-danger"></i>
+                        </div>
+                        <h3>Inversión sin retorno claro</h3>
+                        <p>Gastas en publicidad pero no ves resultados concretos en tu negocio. ¿Sabes cuál es tu ROAS
+                            actual?</p>
+                    </div>
+                </div>
+
+                <!-- Problema 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-user-times fa-2x text-danger"></i>
+                        </div>
+                        <h3>Leads que no compran</h3>
+                        <p>Recibes muchos leads pero pocos se convierten en ventas reales. ¿Tu segmentación es la
+                            correcta?</p>
+                    </div>
+                </div>
+
+                <!-- Problema 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-dollar-sign fa-2x text-danger"></i>
+                        </div>
+                        <h3>Costos muy altos</h3>
+                        <p>Tus costos por adquisición son demasiado altos y está afectando tu rentabilidad.</p>
+                    </div>
+                </div>
+
+                <!-- Problema 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <i class="fas fa-ban fa-2x text-danger"></i>
+                        </div>
+                        <h3>Campañas rechazadas</h3>
+                        <p>Frustración por campañas rechazadas por Meta y cuentas publicitarias bloqueadas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA después de los problemas -->
+            <div class="problem-cta text-center mt-4">
+                <p class="mb-3">No dejes que estos problemas sigan afectando tu negocio</p>
+                <button class="btn btn-primary btn-lg" onclick="location.href='#contacto'">
+                    Obtén tu diagnóstico gratuito
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Sección de Servicios -->
+    <section class="services animate-on-scroll" id="servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="service-items">
+                <div class="service-item">
+                    <h3>Marketing de Contenidos</h3>
+                    <p>Creamos contenido atractivo y relevante para tu público objetivo, que te ayude a generar
+                        confianza y conectar con tu audiencia.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Gestión de Redes Sociales</h3>
+                    <p>Administramos tus redes sociales, creamos contenido estratégico, interactuamos con tu comunidad y
+                        aumentamos tu visibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "¿Cómo podemos ayudarte?" -->
+    <section class="help animate-on-scroll" id="ayuda">
+        <div class="container">
+            <h2>¿Cómo podemos ayudarte?</h2>
+            <div class="help-items">
+                <div class="help-item">
+                    <h3>Estrategia Digital</h3>
+                    <p>Creamos una estrategia digital a medida para tu negocio, desde la creación de contenido hasta la
+                        gestión de redes sociales y la optimización de motores de búsqueda.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Campañas de Publicidad</h3>
+                    <p>Diseñamos campañas de publicidad efectivas en Google Ads y Meta Ads (Facebook e Instagram),
+                        alcanzando a tu público objetivo con precisión.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Análisis y Optimización</h3>
+                    <p>Monitoreamos y analizamos el rendimiento de tus campañas de marketing para optimizarlas
+                        continuamente y obtener mejores resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Campañas en Meta Ads" -->
+    <section class="meta-ads animate-on-scroll" id="meta-ads">
+        <div class="container">
+            <h2>Campañas en Meta Ads</h2>
+            <div class="meta-ads-items">
+                <div class="meta-ads-item">
+                    <h3><!-- Ícono --> Segmentación precisa</h3>
+                    <p>Llegamos a tu público objetivo ideal en Facebook e Instagram, utilizando herramientas de
+                        segmentación avanzadas.</p>
+                </div>
+                <div class="meta-ads-item">
+                    <h3><!-- Ícono --> Análisis de datos</h3>
+                    <p>Seguimos de cerca el rendimiento de tus campañas y ajustamos las estrategias en tiempo real para
+                        optimizar los resultados.</p>
+                </div>
+                <div class="meta-ads-item">
+                    <h3><!-- Ícono --> Creatividad atractiva</h3>
+                    <p>Desarrollamos anuncios y contenido visualmente impactante para captar la atención de tu audiencia
+                        y generar engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "¿Por qué elegirnos?" -->
+    <section class="choose-us animate-on-scroll" id="por-que-elegirnos">
+        <div class="container">
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="choose-items">
+                <div class="choose-item">
+                    <h3><!-- Ícono --> Experiencia y resultados</h3>
+                    <p>Contamos con un equipo de expertos en marketing digital con amplia experiencia en el sector, que
+                        se enfoca en ofrecer soluciones innovadoras y resultados tangibles.</p>
+                </div>
+                <div class="choose-item">
+                    <h3><!-- Ícono --> Enfoque personalizado</h3>
+                    <p>Adaptamos nuestras estrategias a las necesidades específicas de tu negocio, creando soluciones
+                        personalizadas que te ayuden a alcanzar tus objetivos.</p>
+                </div>
+                <div class="choose-item">
+                    <h3><!-- Ícono --> Transparencia y comunicación</h3>
+                    <p>Mantendremos una comunicación abierta y transparente contigo, brindándote información detallada
+                        sobre el progreso de tus campañas y el retorno de tu inversión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact animate-on-scroll" id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Listo para impulsar tu negocio? ¡Conversemos!</p>
+            <form action="#" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+            <div class="social-media">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:contacto@adsboost.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AdsBoost. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu JS personalizado -->
+    <script src="js/index.js"></script>
+<!-- Modal CTA -->
+<div class="modal fade" id="ctaModal" tabindex="-1" aria-labelledby="ctaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-custom">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ctaModalLabel">¿Listo para escalar tu negocio con Meta Ads?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-intro">Agenda una llamada de diagnóstico gratuita donde:</p>
+          <ul class="modal-list">
+            <li><i class="fas fa-check"></i> Analizaremos tu situación actual</li>
+            <li><i class="fas fa-check"></i> Identificaremos oportunidades de mejora</li>
+            <li><i class="fas fa-check"></i> Crearemos un plan personalizado para tu negocio</li>
+          </ul>
+          <!-- Botón que abre WhatsApp con mensaje predefinido -->
+          <a href="https://wa.me/1234567890?text=Quiero%20agendar%20mi%20diagnostico%20gratuito" 
+             class="btn-cta" target="_blank">
+            Agendar Mi Diagnóstico Gratuito
+          </a>
+          <p class="urgencia">Solo 3 cupos disponibles esta semana</p>
+        </div>
+      </div>
     </div>
   </div>
+  
 
-  <!-- Sección Hero -->
-  <section id="hero" class="hero animate-on-scroll">
-    <img src="img/img_ini.png" alt="Imagen de fondo de Hero" class="hero-img">
-    <div class="contenido-hero">
-      <h1>Impulsa tu negocio con AdsBoost</h1>
-      <p>Transformamos tu presencia digital y generamos resultados efectivos.</p>
-      <a href="#contacto" class="btn-cta">¡Hablemos!</a>
-    </div>
-  </section>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <!-- Sección de Servicios -->
-  <section class="services animate-on-scroll" id="servicios">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="service-items">
-        <div class="service-item">
-          <h3>Marketing de Contenidos</h3>
-          <p>Creamos contenido atractivo y relevante para tu público objetivo, que te ayude a generar confianza y conectar con tu audiencia.</p>
-        </div>
-        <div class="service-item">
-          <h3>Gestión de Redes Sociales</h3>
-          <p>Administramos tus redes sociales, creamos contenido estratégico, interactuamos con tu comunidad y aumentamos tu visibilidad.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Sección "¿Cómo podemos ayudarte?" -->
-  <section class="help animate-on-scroll" id="ayuda">
-    <div class="container">
-      <h2>¿Cómo podemos ayudarte?</h2>
-      <div class="help-items">
-        <div class="help-item">
-          <h3>Estrategia Digital</h3>
-          <p>Creamos una estrategia digital a medida para tu negocio, desde la creación de contenido hasta la gestión de redes sociales y la optimización de motores de búsqueda.</p>
-        </div>
-        <div class="help-item">
-          <h3>Campañas de Publicidad</h3>
-          <p>Diseñamos campañas de publicidad efectivas en Google Ads y Meta Ads (Facebook e Instagram), alcanzando a tu público objetivo con precisión.</p>
-        </div>
-        <div class="help-item">
-          <h3>Análisis y Optimización</h3>
-          <p>Monitoreamos y analizamos el rendimiento de tus campañas de marketing para optimizarlas continuamente y obtener mejores resultados.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección "Campañas en Meta Ads" -->
-  <section class="meta-ads animate-on-scroll" id="meta-ads">
-    <div class="container">
-      <h2>Campañas en Meta Ads</h2>
-      <div class="meta-ads-items">
-        <div class="meta-ads-item">
-          <h3><!-- Ícono --> Segmentación precisa</h3>
-          <p>Llegamos a tu público objetivo ideal en Facebook e Instagram, utilizando herramientas de segmentación avanzadas.</p>
-        </div>
-        <div class="meta-ads-item">
-          <h3><!-- Ícono --> Análisis de datos</h3>
-          <p>Seguimos de cerca el rendimiento de tus campañas y ajustamos las estrategias en tiempo real para optimizar los resultados.</p>
-        </div>
-        <div class="meta-ads-item">
-          <h3><!-- Ícono --> Creatividad atractiva</h3>
-          <p>Desarrollamos anuncios y contenido visualmente impactante para captar la atención de tu audiencia y generar engagement.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección "¿Por qué elegirnos?" -->
-  <section class="choose-us animate-on-scroll" id="por-que-elegirnos">
-    <div class="container">
-      <h2>¿Por qué elegirnos?</h2>
-      <div class="choose-items">
-        <div class="choose-item">
-          <h3><!-- Ícono --> Experiencia y resultados</h3>
-          <p>Contamos con un equipo de expertos en marketing digital con amplia experiencia en el sector, que se enfoca en ofrecer soluciones innovadoras y resultados tangibles.</p>
-        </div>
-        <div class="choose-item">
-          <h3><!-- Ícono --> Enfoque personalizado</h3>
-          <p>Adaptamos nuestras estrategias a las necesidades específicas de tu negocio, creando soluciones personalizadas que te ayuden a alcanzar tus objetivos.</p>
-        </div>
-        <div class="choose-item">
-          <h3><!-- Ícono --> Transparencia y comunicación</h3>
-          <p>Mantendremos una comunicación abierta y transparente contigo, brindándote información detallada sobre el progreso de tus campañas y el retorno de tu inversión.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección de Contacto -->
-  <section class="contact animate-on-scroll" id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>¿Listo para impulsar tu negocio? ¡Conversemos!</p>
-      <form action="#" method="POST">
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
-        <button type="submit" class="btn-submit">Enviar Mensaje</button>
-      </form>
-      <div class="social-media">
-        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:contacto@adsboost.com" target="_blank"><i class="fa fa-envelope"></i></a>
-        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 AdsBoost. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS Bundle (incluye Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Tu JS personalizado -->
-  <script src="js/index.js"></script>
 </body>
+
 </html>
