@@ -4,30 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AdsBoost - Agencia de Marketing Digital</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Font Awesome CDN para íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-ku/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-ku/..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <!-- Header -->
+  <!-- Navbar -->
   <header class="header">
-    <div class="container">
+    <div class="container header-container">
       <div class="logo">
-        <a href="#"><span style="color: #FF6B00;">AdsBoost</span></a>
+        <a href="#"><img src="img/logoweb.png" alt="AdsBoost Logo"></a>
       </div>
-      <nav class="nav">
+      <!-- Menú para pantallas grandes -->
+      <nav class="nav desktop-menu">
         <ul>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#ayuda">¿Cómo podemos ayudarte?</a></li>
+          <li><a href="#meta-ads">Meta Ads</a></li>
+          <li><a href="#por-que-elegirnos">¿Por qué elegirnos?</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <!-- Botón off-canvas para pantallas pequeñas (visible solo en móviles) -->
+      <button class="btn btn-outline-light d-md-none" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
+  <!-- Offcanvas de Bootstrap -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled offcanvas-menu-list">
+        <li><a href="#servicios" class="offcanvas-link">Servicios</a></li>
+        <li><a href="#ayuda" class="offcanvas-link">¿Cómo podemos ayudarte?</a></li>
+        <li><a href="#meta-ads" class="offcanvas-link">Meta Ads</a></li>
+        <li><a href="#por-que-elegirnos" class="offcanvas-link">¿Por qué elegirnos?</a></li>
+        <li><a href="#contacto" class="offcanvas-link">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
   <!-- Sección Hero -->
-  <section class="hero animate-on-scroll" id="hero">
-    <div class="container">
+  <section id="hero" class="hero animate-on-scroll">
+    <img src="img/img_ini.png" alt="Imagen de fondo de Hero" class="hero-img">
+    <div class="contenido-hero">
       <h1>Impulsa tu negocio con AdsBoost</h1>
       <p>Transformamos tu presencia digital y generamos resultados efectivos.</p>
       <a href="#contacto" class="btn-cta">¡Hablemos!</a>
@@ -72,7 +102,49 @@
     </div>
   </section>
 
-  <!-- Sección de Contacto / Formulario -->
+  <!-- Sección "Campañas en Meta Ads" -->
+  <section class="meta-ads animate-on-scroll" id="meta-ads">
+    <div class="container">
+      <h2>Campañas en Meta Ads</h2>
+      <div class="meta-ads-items">
+        <div class="meta-ads-item">
+          <h3><!-- Ícono --> Segmentación precisa</h3>
+          <p>Llegamos a tu público objetivo ideal en Facebook e Instagram, utilizando herramientas de segmentación avanzadas.</p>
+        </div>
+        <div class="meta-ads-item">
+          <h3><!-- Ícono --> Análisis de datos</h3>
+          <p>Seguimos de cerca el rendimiento de tus campañas y ajustamos las estrategias en tiempo real para optimizar los resultados.</p>
+        </div>
+        <div class="meta-ads-item">
+          <h3><!-- Ícono --> Creatividad atractiva</h3>
+          <p>Desarrollamos anuncios y contenido visualmente impactante para captar la atención de tu audiencia y generar engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección "¿Por qué elegirnos?" -->
+  <section class="choose-us animate-on-scroll" id="por-que-elegirnos">
+    <div class="container">
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="choose-items">
+        <div class="choose-item">
+          <h3><!-- Ícono --> Experiencia y resultados</h3>
+          <p>Contamos con un equipo de expertos en marketing digital con amplia experiencia en el sector, que se enfoca en ofrecer soluciones innovadoras y resultados tangibles.</p>
+        </div>
+        <div class="choose-item">
+          <h3><!-- Ícono --> Enfoque personalizado</h3>
+          <p>Adaptamos nuestras estrategias a las necesidades específicas de tu negocio, creando soluciones personalizadas que te ayuden a alcanzar tus objetivos.</p>
+        </div>
+        <div class="choose-item">
+          <h3><!-- Ícono --> Transparencia y comunicación</h3>
+          <p>Mantendremos una comunicación abierta y transparente contigo, brindándote información detallada sobre el progreso de tus campañas y el retorno de tu inversión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
   <section class="contact animate-on-scroll" id="contacto">
     <div class="container">
       <h2>Contacto</h2>
@@ -99,7 +171,9 @@
     </div>
   </footer>
 
+  <!-- Bootstrap JS Bundle (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tu JS personalizado -->
   <script src="js/index.js"></script>
 </body>
 </html>
-S

@@ -1,237 +1,362 @@
-/* Reset */
+/* RESET Y CONFIGURACIÓN GLOBAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #1C0747;
-    color: #fff;
-  }
-  
-  /* Utilidad para el contenedor */
-  .container {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-  }
-  
+}
 
-/* Header */
+/* HEADER - NAVBAR */
 .header {
-    background-color: #fff; /* Fondo blanco */
-    padding: 20px 0;
+    background-color: #1C0747;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 150px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacar */
-  }
-  
-  .header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
-  
-  .logo a {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #FF6B00; /* Mantiene el color de la marca */
-    text-decoration: none;
-  }
-  
-  .nav ul {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* LOGO */
+.logo a img {
+    max-height: 100px;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desktop-menu ul {
     list-style: none;
     display: flex;
-  }
-  
-  .nav ul li {
-    margin-left: 20px;
-  }
-  
-  .nav ul li a {
-    color: #1C0747; /* Color oscuro para contraste sobre fondo blanco */
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
-  }
-  
-  .nav ul li a:hover {
-    color: #FF6B00;
-  }
-  
-  /* Sección Hero */
-  .hero {
-    display: flex;
+    gap: 30px;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    padding-top: 80px; /* Espacio para el header fijo */
-    background: url('../img/hero-bg.jpg') center center/cover no-repeat;
-  }
-  
-  .hero h1 {
-    font-size: 2.5em;
+}
+.desktop-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.desktop-menu ul li a:hover {
+    color: #ff6b00;
+    transform: scale(1.05);
+}
+
+/* BOTÓN DE MENÚ (MOBILE) */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    display: none;
+    cursor: pointer;
+}
+
+/* OFF-CANVAS MENU PERSONALIZADO */
+.offcanvas {
+    background-color: #1C0747;
+    color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.offcanvas .offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.offcanvas .offcanvas-title {
+    font-size: 1.5em;
+    color: #FF6B00;
+}
+.offcanvas .btn-close {
+    filter: invert(1);
+}
+.offcanvas-menu-list {
+    margin-top: 20px;
+}
+.offcanvas-menu-list li {
+    margin-bottom: 15px;
+}
+.offcanvas-link {
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.offcanvas-link:hover {
+    color: #FF6B00;
+    transform: translateX(5px);
+}
+
+/* DESKTOP MENU (OFF-CANVAS) */
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #1C0747;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1500;
+    color: #fff;
+}
+.offcanvas-menu.open {
+    left: 0;
+}
+.offcanvas-menu .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
     margin-bottom: 20px;
-  }
-  
-  .hero p {
+}
+.offcanvas-menu ul {
+    list-style: none;
+    margin-top: 20px;
+}
+.offcanvas-menu ul li {
+    margin-bottom: 15px;
+}
+.offcanvas-menu ul li a {
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.offcanvas-menu ul li a:hover {
+    color: #ff6b00;
+    transform: translateX(5px);
+}
+
+/* SECCIÓN HERO */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 70px;
+}
+.contenido-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+}
+.contenido-hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.contenido-hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
-  }
-  
-  .btn-cta {
-    background-color: #FF6B00;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+}
+.btn-cta {
+    background-color: #ff6b00;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-cta:hover {
+    transition: background-color 0.3s ease;
+}
+.btn-cta:hover {
     background-color: #e65a00;
-  }
-  
-  /* Títulos de Sección */
-  section h2 {
+}
+
+/* ANIMACIONES AL HACER SCROLL */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .header-container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        min-height: 400px;
+        height: 700px;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        text-align: center;
+        color: #fff;
+        background: url('../img/img_ini.png') center center no-repeat;
+        background-size: cover;
+    }
+    .hero-img {
+        display: none;
+    }
+    .contenido-hero {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 20px 0;
+        margin-top: 400px;
+        text-shadow: 10px #1C0747;
+    }
+}
+
+/* SECCIONES DE CONTENIDO */
+section {
+    padding: 60px 0;
+    scroll-margin-top: 150px;
+}
+.services,
+.meta-ads,
+.contact {
+    background-color: #ffffff;
+}
+.help,
+.choose-us {
+    background-color: #f9f9f9;
+}
+section h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
-  }
-  
-  /* Sección de Servicios */
-  .services .service-items {
+}
+
+/* TARJETAS DE CONTENIDO */
+.service-item,
+.help-item,
+.meta-ads-item,
+.choose-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+.service-item:hover,
+.help-item:hover,
+.meta-ads-item:hover,
+.choose-item:hover {
+    transform: translateY(-5px);
+}
+.service-item h3,
+.help-item h3,
+.meta-ads-item h3,
+.choose-item h3 {
+    color: #ff6b00;
+    margin-bottom: 10px;
+}
+
+/* GRILLAS DE TARJETAS */
+.service-items,
+.help-items,
+.meta-ads-items,
+.choose-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-  }
-  
-  .service-item {
-    background-color: rgba(255, 107, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 300px;
-  }
-  
-  .service-item h3 {
-    color: #FF6B00;
-    margin-bottom: 10px;
-  }
-  
-  /* Sección "¿Cómo podemos ayudarte?" */
-  .help .help-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-  }
-  
-  .help-item {
-    background-color: rgba(255, 107, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 300px;
-  }
-  
-  .help-item h3 {
-    color: #FF6B00;
-    margin-bottom: 10px;
-  }
-  
-  /* Sección de Contacto */
-  .contact form {
+}
+
+/* SECCIÓN DE CONTACTO */
+.contact form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .contact input,
-  .contact textarea {
+}
+.contact input,
+.contact textarea {
     padding: 10px;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .contact button.btn-submit {
-    background-color: #FF6B00;
+}
+.contact button.btn-submit {
+    background-color: #ff6b00;
     border: none;
     padding: 15px;
     color: #fff;
     font-size: 1em;
     border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .contact button.btn-submit:hover {
+    transition: background-color 0.3s ease;
+}
+.contact button.btn-submit:hover {
     background-color: #e65a00;
-  }
-  
-  /* Íconos de Redes Sociales */
-  .social-media {
+}
+
+/* ÍCONOS DE REDES SOCIALES */
+.social-media {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .social-media a {
-    color: #fff;
+}
+.social-media a {
+    color: #ff6b00;
     margin: 0 10px;
     font-size: 1.5em;
-    transition: color 0.3s;
-  }
-  
-  .social-media a:hover {
-    color: #FF6B00;
-  }
-  
-  /* Footer */
-  .footer {
+    transition: color 0.3s ease;
+}
+.social-media a:hover {
+    color: #333;
+}
+
+/* FOOTER */
+.footer {
     text-align: center;
     padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 40px;
-  }
-  
-  /* Animaciones al hacer scroll */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  .animate-on-scroll.scrolled {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .hero h1 {
-      font-size: 2em;
-    }
-  
-    .hero p {
-      font-size: 1em;
-    }
-  }
-  
-  /* Scroll suave (si el navegador no lo soporta de forma nativa) */
-  html {
-    scroll-behavior: smooth;
-  }
-  
+    border-top: 1px solid #ccc;
+    background-color: #1C0747;
+    color: #fff;
+}

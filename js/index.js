@@ -1,34 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona todos los elementos a animar al hacer scroll
+document.addEventListener("DOMContentLoaded", function () {
     const scrollElements = document.querySelectorAll(".animate-on-scroll");
   
-    const elementInView = (el, dividend = 1) => {
-      const elementTop = el.getBoundingClientRect().top;
-      return (
-        elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
-      );
+    // Función que determina si un elemento está visible según un umbral (en este caso, 10%)
+    const elementInView = (el, threshold = 0.1) => {
+      const rect = el.getBoundingClientRect();
+      const elementHeight = rect.height;
+      const visiblePart = Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top);
+      return visiblePart / elementHeight > threshold;
     };
   
-    const displayScrollElement = (element) => {
-      element.classList.add("scrolled");
-    };
-  
-    const hideScrollElement = (element) => {
-      element.classList.remove("scrolled");
-    };
-  
+    // Función que añade o remueve la clase "scrolled" según la visibilidad del elemento
     const handleScrollAnimation = () => {
       scrollElements.forEach((el) => {
-        if (elementInView(el, 1.25)) {
-          displayScrollElement(el);
+        if (elementInView(el)) {
+          el.classList.add("scrolled");
         } else {
-          hideScrollElement(el);
+          el.classList.remove("scrolled");
         }
       });
     };
   
     window.addEventListener("scroll", handleScrollAnimation);
-    // Ejecuta al cargar la página para animar elementos ya visibles
+    // Ejecuta al cargar la página para que los elementos ya visibles se animen correctamente
     handleScrollAnimation();
   });
   
