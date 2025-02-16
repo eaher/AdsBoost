@@ -1,0 +1,237 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #1C0747;
+    color: #fff;
+  }
+  
+  /* Utilidad para el contenedor */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+
+/* Header */
+.header {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacar */
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FF6B00; /* Mantiene el color de la marca */
+    text-decoration: none;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav ul li {
+    margin-left: 20px;
+  }
+  
+  .nav ul li a {
+    color: #1C0747; /* Color oscuro para contraste sobre fondo blanco */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  .nav ul li a:hover {
+    color: #FF6B00;
+  }
+  
+  /* Sección Hero */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 80px; /* Espacio para el header fijo */
+    background: url('../img/hero-bg.jpg') center center/cover no-repeat;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .btn-cta {
+    background-color: #FF6B00;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-cta:hover {
+    background-color: #e65a00;
+  }
+  
+  /* Títulos de Sección */
+  section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  /* Sección de Servicios */
+  .services .service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .service-item {
+    background-color: rgba(255, 107, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+  }
+  
+  .service-item h3 {
+    color: #FF6B00;
+    margin-bottom: 10px;
+  }
+  
+  /* Sección "¿Cómo podemos ayudarte?" */
+  .help .help-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .help-item {
+    background-color: rgba(255, 107, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+  }
+  
+  .help-item h3 {
+    color: #FF6B00;
+    margin-bottom: 10px;
+  }
+  
+  /* Sección de Contacto */
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .contact button.btn-submit {
+    background-color: #FF6B00;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact button.btn-submit:hover {
+    background-color: #e65a00;
+  }
+  
+  /* Íconos de Redes Sociales */
+  .social-media {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: #FF6B00;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+  }
+  
+  /* Animaciones al hacer scroll */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .animate-on-scroll.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero h1 {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Scroll suave (si el navegador no lo soporta de forma nativa) */
+  html {
+    scroll-behavior: smooth;
+  }
+  
